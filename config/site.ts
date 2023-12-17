@@ -1,69 +1,35 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Next.js + NextUI",
-	description: "Make beautiful websites regardless of your design experience.",
+	name: "Bull's Paradise",
+	description: "Exclusive Community Experienced in trading and investing in the stock market",
 	navItems: [
 		{
-			label: "Home",
+			label: "Join Whatsapp Group",
 			href: "/",
 		},
-    {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
-      label: "About",
-      href: "/about",
-    }
+
+
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Join Whatsapp Group",
+			href: "/",
 		},
-		{
-			label: "Dashboard",
-			href: "/dashboard",
-		},
-		{
-			label: "Projects",
-			href: "/projects",
-		},
-		{
-			label: "Team",
-			href: "/team",
-		},
-		{
-			label: "Calendar",
-			href: "/calendar",
-		},
-		{
-			label: "Settings",
-			href: "/settings",
-		},
-		{
-			label: "Help & Feedback",
-			href: "/help-feedback",
-		},
-		{
-			label: "Logout",
-			href: "/logout",
-		},
+		
 	],
 	links: {
-		github: "https://github.com/nextui-org/nextui",
-		twitter: "https://twitter.com/getnextui",
-		docs: "https://nextui.org",
-		discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev"
+		github: "https://github.com/kiritocode1",
+		twitter: "https://twitter.com/kiritotwt1",
+    	sponsor: ""
 	},
+	keywords: ["Bull's Paradise", "Investing", "Trading", "Stock Market", "Stocks", "Stocks Trading", "Stocks Investing", "Stocks Market", "Stocks Market Trading", "Stocks Market Investing", "Stocks Market Trading and Investing", "Stocks Market Trading and Investing Community", "Stocks Market Trading and Investing Community in India", "Stocks Market"], 
+	robots: {
+		index: true, 
+		noimageindex: true, 
+		follow: false, 
+		"max-image-preview": "large",
+		
+	
+	}
 };

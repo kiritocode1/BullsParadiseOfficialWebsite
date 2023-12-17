@@ -1,0 +1,1 @@
+export  const WhatsappLinkHereBBY = "https://chat.whatsapp.com/IwZ6r6vDJHE43CrzYHj81R";
