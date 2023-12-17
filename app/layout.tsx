@@ -7,7 +7,7 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { GeistMono } from "geist/font/mono";
-
+import {Analytics} from "@vercel/analytics/react"
 export const metadata: Metadata = {
 	title: {
 		default: siteConfig.name,
@@ -74,6 +74,7 @@ export default function RootLayout({
 								<span className="text-primary">©TheBullsParadiseGroup</span>
 								<p className="text-default-600"> </p>
 							</Link>
+							<Analytics/>
 						</footer>
 					</div>
 				</Providers>
