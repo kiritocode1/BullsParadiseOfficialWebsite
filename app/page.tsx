@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 import Image from "next/image";
 import { WhatsappLinkHereBBY } from "./WhatsappLinkHereBBY/Aman";
 import infoCards from "./libs/InfoCards";
-import { CheckCheck, LucideIcon, MonitorSmartphone } from "lucide-react";
+import {  LucideIcon, MessageSquareShare } from "lucide-react";
 import { ReactElement } from "react";
 import { Button } from "@nextui-org/button";
 import { clsx } from "clsx";
@@ -23,11 +23,14 @@ export default function Home() {
 						<h1 className="text-4xl font-black md:text-8xl">
 							{"Bull's Paradise"}
 						</h1>
-						<h2 className="text-md md:text-2xl">Start growing today!</h2>
+						<h2 className="text-md md:text-2xl">
+							{" "}
+							90-95% ACCURACY CONSISTENTLY
+						</h2>
 					</div>
 					<p className="max-w-md text-sm md:text-base text-zinc-500">
 						{
-							"Bull's Paradise is a community of like minded people who are interested in the stock market. We are a community of traders and investors who are willing to share their knowledge and experience with you."
+							"ARE YOU FED UP WITH YOUR DAILY LOSSES ? SO DON'T WORRY HERE IS THE SOLUTION . WE BRING YOU BULL'S PARADISE WHATSAPP GROUP FOR YOU"
 						}
 					</p>
 					<div className="w-full flex items-center justify-center md:justify-start gap-4">
@@ -41,7 +44,7 @@ export default function Home() {
 							isExternal={true}
 							variant="light"
 							href={WhatsappLinkHereBBY}>
-							<MonitorSmartphone />
+							<MessageSquareShare /> 
 							Join whatsapp Group
 						</Button>
 					</div>
@@ -106,11 +109,4 @@ function InfoCard({ title, Icon, children }: IInfoCardProps) {
 			<div>{children}</div>
 		</div>
 	);
-}
-
-interface IPricingCardProps {
-	title: string;
-	price: number;
-	benefits: string[];
-	oneliner: string;
 }

@@ -72,7 +72,7 @@ export default function RootLayout({
 								title="nextui.org homepage"
 							>
 								<span className="text-primary">©TheBullsParadiseGroup</span>
-								<p className="text-default-600"> </p>
+								<p className="text-default-600">. All Rights Reserved . 2023 </p>
 							</Link>
 							<Analytics/>
 						</footer>

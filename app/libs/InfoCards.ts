@@ -10,7 +10,7 @@ interface IInfoCard {
 const infoCards: IInfoCard[] = [
     {
         title: "Increased Profitability",
-        bodyText: "With Professional Investers, you can increase your profitability by up to 90% through data-driven sales insights and recommendations.",
+        bodyText: "With Professional Investers and Minimum Capital of 8k-10k",
         icon: ArrowUpNarrowWide,
         id: 1
     },
@@ -22,7 +22,7 @@ const infoCards: IInfoCard[] = [
     },
     {
         title: "Reduced Risk",
-        bodyText: "With Professional Investors, you can reduce your risk by up to 80% through data-driven sales insights and recommendations.",
+        bodyText: "With Professional Investors, you can reduce your risk by up to 80% through data-driven sales insights and recommendations with 3-4 calls daily.",
         icon: CandlestickChart ,
         id: 3
     },
