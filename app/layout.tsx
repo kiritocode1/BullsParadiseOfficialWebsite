@@ -68,11 +68,11 @@ export default function RootLayout({
 							<Link
 								isExternal
 								className="flex items-center gap-1 text-current"
-								href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-								title="nextui.org homepage"
+								href="#"
+								title="homepage"
 							>
 								<span className="text-primary">©TheBullsParadiseGroup</span>
-								<p className="text-default-600">. All Rights Reserved . 2023 </p>
+								<p className="text-default-600">. All Rights Reserved . 2023 .</p>
 							</Link>
 							<Analytics/>
 						</footer>

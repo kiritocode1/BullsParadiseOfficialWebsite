@@ -10,6 +10,15 @@ import { Button } from "@nextui-org/button";
 import { clsx } from "clsx";
 import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
+import {
+	Table,
+	TableHeader,
+	TableColumn,
+	TableBody,
+	TableRow,
+	TableCell,
+} from "@nextui-org/table";
+import { Checkbox } from "@nextui-org/checkbox";
 
 
 export default function Home() {
@@ -40,11 +49,11 @@ export default function Home() {
 								linkStyles({ color: "foreground" }),
 								"data-[active=true]:text-primary data-[active=true]:font-medium ",
 							)}
-							color="success"
+							color="secondary"
 							isExternal={true}
 							variant="light"
 							href={WhatsappLinkHereBBY}>
-							<MessageSquareShare /> 
+							<MessageSquareShare />
 							Join whatsapp Group
 						</Button>
 					</div>
@@ -52,7 +61,7 @@ export default function Home() {
 
 				<div className="w-full h-2/4 md:h-full md:w-3/5 flex items-center justify-center relative z-10">
 					<Spline
-						className="w-full flex scale-[.25] sm:scale-[.35] lg:scale-[.5] items-center justify-center md:justify-start"
+						className="w-full flex scale-[.25] sm:scale-[.35] lg:scale-[.5] items-center justify-center md:justify-start "
 						scene="https://prod.spline.design/pvM5sSiYV2ivWraz/scene.splinecode"
 					/>
 				</div>
@@ -61,7 +70,6 @@ export default function Home() {
 			<section
 				id="about"
 				className="h-fit min-h-screen w-full flex relative items-center justify-center p-8">
-
 				<div className="w-full h-full flex items-center justify-center flex-col gap-8 max-w-7xl">
 					<h3 className="text-4xl md:text-5xl font-bold">Why Join US ???</h3>
 					<div className="w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-4 justify-between relative">
@@ -79,6 +87,58 @@ export default function Home() {
 						})}
 					</div>
 				</div>
+			</section>
+			<section id="points" className="container ">
+				<h3 className="text-4xl md:text-5xl font-bold text-center mb-8">
+					MAIN FEATURES INCLUDE
+				</h3>
+				<Table
+					aria-label="Features of the program"
+					fullWidth
+					color="primary"
+					isHeaderSticky>
+					<TableHeader>
+						<TableColumn align="center">Features</TableColumn>
+					</TableHeader>
+					<TableBody>
+						<TableRow key="1">
+							<TableCell align="center">
+								{" "}
+								<Checkbox defaultSelected radius="full" color="secondary">
+									WhatsappGroup Details
+								</Checkbox>
+							</TableCell>
+						</TableRow>
+						<TableRow key="2">
+							<TableCell align="center">
+								<Checkbox defaultSelected radius="full" color="secondary">
+									Traders Will be given before active
+								</Checkbox>
+							</TableCell>
+						</TableRow>
+						<TableRow key="3">
+							<TableCell align="center">
+								<Checkbox defaultSelected radius="full" color="secondary">
+									Min Capital required 10k-15k
+								</Checkbox>
+							</TableCell>
+						</TableRow>
+						<TableRow key="4">
+							<TableCell align="center">
+								<Checkbox defaultSelected radius="full" color="secondary">
+									3-4 calls Daily
+								</Checkbox>
+							</TableCell>
+						</TableRow>
+						<TableRow key="5">
+							<TableCell align="center">
+								<Checkbox defaultSelected radius="full" color="secondary">
+									Accuracy 90-95%
+								</Checkbox>
+							</TableCell>
+						</TableRow>
+					</TableBody>
+				</Table>
 			</section>
 		</main>
 	);

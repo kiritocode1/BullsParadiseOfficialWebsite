@@ -94,8 +94,9 @@ export const Navbar = () => {
 										? "danger"
 										: "foreground"
 								}
-								href="#"
+								href={WhatsappLinkHereBBY}
 								size="lg"
+								target="_blank"
 							>
 								{item.label}
 							</Link>
