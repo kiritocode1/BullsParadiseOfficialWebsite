@@ -66,28 +66,6 @@ export default function Home() {
 					/>
 				</div>
 			</header>
-
-			<section
-				id="about"
-				className="h-fit min-h-screen w-full flex relative items-center justify-center p-8">
-				<div className="w-full h-full flex items-center justify-center flex-col gap-8 max-w-7xl">
-					<h3 className="text-4xl md:text-5xl font-bold">Why Join US ???</h3>
-					<div className="w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-4 justify-between relative">
-						{infoCards.map((infoCard) => {
-							return (
-								<InfoCard
-									key={infoCard.id}
-									Icon={infoCard.icon}
-									title={infoCard.title}>
-									<p className="text-sm sm:text-base text-center md:text-left">
-										{infoCard.bodyText}
-									</p>
-								</InfoCard>
-							);
-						})}
-					</div>
-				</div>
-			</section>
 			<section id="points" className="container ">
 				<h3 className="text-4xl md:text-5xl font-bold text-center mb-8">
 					MAIN FEATURES INCLUDE
@@ -95,12 +73,15 @@ export default function Home() {
 				<Table
 					aria-label="Features of the program"
 					fullWidth
-					color="primary"
-					isHeaderSticky>
+					classNames={{
+						"tbody": "dark:bg-background ",
+						'wrapper': 'dark:bg-background'
+
+					}}>
 					<TableHeader>
 						<TableColumn align="center">Features</TableColumn>
 					</TableHeader>
-					<TableBody>
+					<TableBody className="bg-gray-900">
 						<TableRow key="1">
 							<TableCell align="center">
 								{" "}
@@ -139,6 +120,27 @@ export default function Home() {
 						</TableRow>
 					</TableBody>
 				</Table>
+			</section>
+			<section
+				id="about"
+				className="h-fit min-h-screen w-full flex relative items-center justify-center p-8">
+				<div className="w-full h-full flex items-center justify-center flex-col gap-8 max-w-7xl">
+					<h3 className="text-4xl md:text-5xl font-bold">Why Join US ???</h3>
+					<div className="w-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-4 justify-between relative">
+						{infoCards.map((infoCard) => {
+							return (
+								<InfoCard
+									key={infoCard.id}
+									Icon={infoCard.icon}
+									title={infoCard.title}>
+									<p className="text-sm sm:text-base text-center md:text-left">
+										{infoCard.bodyText}
+									</p>
+								</InfoCard>
+							);
+						})}
+					</div>
+				</div>
 			</section>
 		</main>
 	);
