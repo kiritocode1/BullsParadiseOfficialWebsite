@@ -188,7 +188,8 @@ export default function Home () {
 			<h3 className="text-4xl md:text-5xl font-bold mb-8">
 				Real world Results :{" "}
 			</h3>
-			<section className="w-full overflow-clip " >
+			<section className="w-full overflow-hidden
+			 " >
 				<div className={`flex fill center bg-background`}>
 					<div className={styles.main}>
 						<Slider
