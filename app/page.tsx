@@ -19,9 +19,52 @@ import {
 	TableCell,
 } from "@nextui-org/table";
 import { Checkbox } from "@nextui-org/checkbox";
+import { Slider } from "@/components/Slider";
+import {animated as  a } from "@react-spring/web";
+import styles from "./Home.module.css";
+
+import images from "@/components/Assetcompressor";
+
+ const items = [
+
+	{
+		css: images.at(1),
+		height: 300,
+	},
+	{
+		css: images.at(2),
+		height: 300,
+	},
+	{
+		css: images.at(3),
+		height: 300,
+	},
+	{
+		css: images.at(4),
+		height: 300,
+	},
+	{
+		css: images.at(5),
+		height: 300,
+	},
+	{
+		css: images.at(6),
+		height: 200,
+	},
+	{
+		css: images.at(7),
+		height: 300,
+	},
+
+	
+];
 
 
-export default function Home() {
+
+
+
+export default function Home () {
+	
 	return (
 		<main className="flex min-h-screen h-fit flex-col items-center justify-center relative">
 			<header
@@ -74,9 +117,8 @@ export default function Home() {
 					aria-label="Features of the program"
 					fullWidth
 					classNames={{
-						"tbody": "dark:bg-background ",
-						'wrapper': 'dark:bg-background'
-
+						tbody: "dark:bg-background ",
+						wrapper: "dark:bg-background",
 					}}>
 					<TableHeader>
 						<TableColumn align="center">Features</TableColumn>
@@ -139,6 +181,34 @@ export default function Home() {
 								</InfoCard>
 							);
 						})}
+					</div>
+				</div>
+			</section>
+				<h3 className="text-4xl md:text-5xl font-bold mb-8">Real world Results : </h3>
+			<section className="w-full ">
+				<div className={`flex fill center bg-background`}>
+					<div className={styles.main}>
+						<Slider
+							items={items}
+							width={700}
+							visible={3}
+							className="bg-background">
+							{({ css }, i) => (
+								<div className={styles.content}>
+									<div className={styles.marker}>
+										{String(i + 1).padStart(2, "0")}
+									</div>
+									<a.div className={styles.image}>
+										<Image
+											src={items[i].css}
+											alt="image"
+											width={700}
+											height={items[i].height}
+										/>
+									</a.div>
+								</div>
+							)}
+						</Slider>
 					</div>
 				</div>
 			</section>
