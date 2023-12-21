@@ -193,7 +193,7 @@ export default function Home () {
 							items={items}
 							width={700}
 							visible={3}
-							className="bg-background">
+							className="bg-background" style={styles}>
 							{({ css }, i) => (
 								<div className={styles.content}>
 									<div className={styles.marker}>
