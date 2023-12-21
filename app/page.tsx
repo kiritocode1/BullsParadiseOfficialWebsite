@@ -1,7 +1,7 @@
 "use client";
 
 import Spline from "@splinetool/react-spline";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { WhatsappLinkHereBBY } from "./WhatsappLinkHereBBY/Aman";
 import infoCards from "./libs/InfoCards";
 import {  LucideIcon, MessageSquareShare } from "lucide-react";
@@ -26,7 +26,7 @@ import styles from "./Home.module.css";
 import images from "@/components/Assetcompressor";
 
 
- const items = [
+const items: { css: StaticImageData | undefined; height:number }[] = [
 
 	{
 		css: images.at(1),
@@ -185,7 +185,9 @@ export default function Home () {
 					</div>
 				</div>
 			</section>
-				<h3 className="text-4xl md:text-5xl font-bold mb-8">Real world Results : </h3>
+			<h3 className="text-4xl md:text-5xl font-bold mb-8">
+				Real world Results :{" "}
+			</h3>
 			<section className="w-full ">
 				<div className={`flex fill center bg-background`}>
 					<div className={styles.main}>
@@ -193,22 +195,27 @@ export default function Home () {
 							items={items}
 							width={700}
 							visible={3}
-							className="bg-background" style={styles}>
-							{({ css }, i) => (
-								<div className={styles.content}>
-									<div className={styles.marker}>
-										{String(i + 1).padStart(2, "0")}
+							className="bg-background"
+							style={styles}>
+							{
+								// @ts-ignore
+								({ css }, i) => (
+									<div className={styles.content}>
+										<div className={styles.marker}>
+											{String(i + 1).padStart(2, "0")}
+										</div>
+										<a.div className={styles.image}>
+											<Image
+												
+												src={items[i].css?.src!}
+												alt="image"
+												width={700}
+												height={items[i].height}
+											/>
+										</a.div>
 									</div>
-									<a.div className={styles.image}>
-										<Image
-											src={items[i].css}
-											alt="image"
-											width={700}
-											height={items[i].height}
-										/>
-									</a.div>
-								</div>
-							)}
+								)
+							}
 						</Slider>
 					</div>
 				</div>
