@@ -15,7 +15,7 @@ const styles = {
 
 
 
-export function Slider({ items, width = 600, visible = 4, style, children , className }) {
+export function Slider({ items, width = 1200, visible = 4, style, children , className }) {
 	const idx = useCallback(
 		(x, l = items.length) => (x < 0 ? x + l : x) % l,
 		[items],
@@ -82,8 +82,7 @@ export function Slider({ items, width = 600, visible = 4, style, children , clas
 			{springs.map(({ x }, i) => (
 				<a.div
 					key={i}
-					style={{ ...styles.item, width, x }}
-					
+					style={ { ...styles.item, width, x } }
 				>
 					{children(items[i], i)}
 				</a.div>

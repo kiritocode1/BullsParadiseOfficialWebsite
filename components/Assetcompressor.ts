@@ -1,12 +1,11 @@
 import one from "./assets/1.png"; 
-import two from "./assets/2.png";
-import three from "./assets/3.png";
-import four from "./assets/4.png";
-import five from "./assets/5.png";
+import two from "./assets/2.jpg";
+import three from "./assets/3.jpg";
+import four from "./assets/4.jpg";
+import five from "./assets/5.jpg";
 import six from "./assets/6.png";
 import seven from "./assets/7.png";
-import eight from "./assets/8.png";
-
+import eight from "./assets/8.jpg";
 const images = [
     one,
     two,
@@ -15,7 +14,8 @@ const images = [
     five,
     six,
     seven,
-    eight
+    eight,
+    
 ]
 
 export default images;

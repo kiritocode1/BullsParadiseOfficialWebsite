@@ -26,40 +26,14 @@ import styles from "./Home.module.css";
 import images from "@/components/Assetcompressor";
 
 
-const items: { css: StaticImageData | undefined; height:number }[] = [
-
-	{
-		css: images.at(1),
-		height: 300,
-	},
-	{
-		css: images.at(2),
-		height: 300,
-	},
-	{
-		css: images.at(3),
-		height: 300,
-	},
-	{
-		css: images.at(4),
-		height: 300,
-	},
-	{
-		css: images.at(5),
-		height: 300,
-	},
-	{
-		css: images.at(6),
-		height: 200,
-	},
-	{
-		css: images.at(7),
-		height: 300,
-	},
-
-	
-];
-
+const items: { css: StaticImageData | undefined; height:number , width:number}[] = images.map((image) => {
+	return {
+		css: image,
+		height: image.height,
+		width:image.width ,
+	};
+});
+import { GeistMono } from "geist/font/mono";
 
 
 
@@ -202,16 +176,17 @@ export default function Home () {
 								// @ts-ignore
 								({ css }, i) => (
 									<div className={styles.content}>
-										<div className={styles.marker}>
-											{String(i + 1).padStart(2, "0")}
+										<div className={styles.marker+"text-foreground"}>
+											{String(i + 1).padStart(3, "0")}
 										</div>
-										<a.div className={styles.image}>
+										<a.div className={styles.image+"h-96"}>
 											<Image
 												
 												src={items[i].css?.src!}
 												alt="image"
-												width={700}
+												width={items[i].width}
 												height={items[i].height}
+												className="select-none h-96 overflow-hidden"
 											/>
 										</a.div>
 									</div>
