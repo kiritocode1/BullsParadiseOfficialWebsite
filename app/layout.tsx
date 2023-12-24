@@ -15,32 +15,31 @@ export async function generateMetadata () {
 
 
  const metadata: Metadata = {
-
-	title: {
-		default: siteConfig.name,
-		template: `%s - ${siteConfig.name}`,
-	},
-	description: siteConfig.description,
-
-	icons: {
-		icon: "/favicon.ico",
-		shortcut: "/favicon-16x16.png",
-		apple: "/apple-touch-icon.png",
-	},
-	keywords: siteConfig.keywords,
-	robots: {
-		index: true,
-		follow: false,
-		"max-image-preview": "large",
-		googleBot: {
-			index: true,
-			follow: true,
-			"max-image-preview": "large",
+		title: {
+			default: siteConfig.name,
+			template: `%s - ${siteConfig.name}`,
 		},
-	},
-	openGraph: {
-		images: "http://localhost:3000/og/",
-	},
+		description: siteConfig.description,
+
+		icons: {
+			icon: "/favicon.ico",
+			shortcut: "/favicon-16x16.png",
+			apple: "/apple-touch-icon.png",
+		},
+		keywords: siteConfig.keywords,
+		robots: {
+			index: true,
+			follow: false,
+			"max-image-preview": "large",
+			googleBot: {
+				index: true,
+				follow: true,
+				"max-image-preview": "large",
+			},
+		},
+		openGraph: {
+			images: "https://bulls-paradise-official-website.vercel.app/og",
+		},
  };
 	
 	
