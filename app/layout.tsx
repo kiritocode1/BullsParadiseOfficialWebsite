@@ -7,8 +7,15 @@ import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 import { GeistMono } from "geist/font/mono";
-import {Analytics} from "@vercel/analytics/react"
-export const metadata: Metadata = {
+import { Analytics } from "@vercel/analytics/react"
+
+
+export async function generateMetadata () {
+
+
+
+ const metadata: Metadata = {
+
 	title: {
 		default: siteConfig.name,
 		template: `%s - ${siteConfig.name}`,
@@ -29,13 +36,19 @@ export const metadata: Metadata = {
 			index: true,
 			follow: true,
 			"max-image-preview": "large",
-
-		}
-		
-
-
+		},
 	},
-};
+	openGraph: {
+		images: "http://localhost:3000/og/",
+	},
+ };
+	
+	
+	return metadata;
+} 
+
+
+
 
 export const viewport: Viewport = {
 	themeColor: [
